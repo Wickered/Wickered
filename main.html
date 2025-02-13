@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awawwawawawa</title>
+    <style>
+        body {
+            background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2M2eHJhaHA2aXIweDc4MXJ6MjFwOGEyNThnNWxieWJqbHJ5eGV4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xTfu5NqEEW8vh6/giphy.gif');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color:#ffffff;
+        }
+        .main-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            text-align: center;
+        }
+        .main-page button {
+            background-color: #c867d4;
+            color: white;
+            padding: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.5em;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .main-page button:hover {
+            background-color: #be09e2;
+        }
+        .message-box {
+            display: none;
+            background: none;
+            padding: none;
+            border-radius: none;
+            box-shadow: none;
+            margin-top: none;
+            font-size: 2em;
+        }
+        .left-message, .right-message{
+            position: absolute;
+            display:none;
+            font-family: cursive;
+        }
+        .left-message{
+            left: 6%;
+            font-size: 2em;
+        }
+        .right-message{
+            right: 6%;
+            font-size: 2em;
+        }
+        .flowie {
+        display: none;
+         margin: none;
+         width: 100%; 
+         text-align: center; 
+        }
+         .flowie img {
+         width: 30vw;
+         max-width: 1000px;
+        }
+        .flowie img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+        #cry {
+        position:absolute;
+        left:15%;
+        display: none;
+         margin: none;
+         width: 10%; 
+        }
+        #cry:hover{
+            transform:none;
+            cursor:default;
+        }
+        #car {
+        position:absolute;
+        right:15%;
+        display: none;
+         margin: none;
+         width: 10%; 
+        }
+        #car:hover{
+            transform:none;
+            cursor:default;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    <div class="main-page">
+        <h1 style="font-family: cursive;" id="greet">Happy Valentines Day Babi :D</h1>
+        <button onclick="showFlowie()" id="button">>ooo what's dis?<</button>
+        <div class="flowie">
+            <img src="car.jpg" alt="cat with flower" id="car">
+            <img src="cry.png" alt="cat cry" id="cry">
+            <img src="flowie.png" alt="flowie for you" id="flowie">
+        </div>
+        <div class="message-box" id="message">
+            <p style="font-family: cursive;" >WAW flowie!</p>
+        </div>
+    </div>
+    <div id="right-message" class="right-message">have this virtual hydrangea bouquet!<br> I chose hydrangea cus u tooold me<br> it's your favorite flower</div>
+    <div id="left-message" class="left-message">It'd be so much better if <br>I could give you this in person but..</div>
+    <script>
+        function showFlowie() {
+            document.querySelector('.flowie').style.display = 'block';
+            document.getElementById('message').style.display = 'block';
+            var audio = document.getElementById('bg-music');
+            audio.play();
+        }
+        let clickCount = 0;
+
+        document.getElementById("flowie").addEventListener("click", function() {
+            clickCount++;
+
+            if (clickCount === 1) {
+                document.getElementById("left-message").style.display = "block";
+                document.getElementById("greet").style.display = "none";
+                document.getElementById("button").style.display = "none";
+                document.getElementById("message").style.display = "none";
+                document.getElementById("cry").style.display = "block";
+            } else if (clickCount === 2) {
+                document.getElementById("right-message").style.display = "block";
+                document.getElementById("greet").style.display = "none";
+                document.getElementById("button").style.display = "none";
+                document.getElementById("message").style.display = "none";
+                document.getElementById("car").style.display = "block";
+            } else if (clickCount >= 3) {
+            }
+        });
+    </script>
+</body>
+</html>
