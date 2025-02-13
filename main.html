@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>awawwawawawa</title>
+    <style>
+        body {
+            background-image: url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2M2eHJhaHA2aXIweDc4MXJ6MjFwOGEyNThnNWxieWJqbHJ5eGV4eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xTfu5NqEEW8vh6/giphy.gif');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color:#ffffff;
+        }
+        .howl-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+            text-align: center;
+        }
+        .howl-page button {
+            background-color: #c867d4;
+            color: white;
+            padding: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 0.5em;
+            cursor: pointer;
+            box-shadow: none;
+        }
+        .howl-page button:hover {
+            background-color: #be09e2;
+        }
+        .message-box {
+            display: none;
+            background: none;
+            padding: none;
+            border-radius: none;
+            box-shadow: none;
+            margin-top: none;
+            font-size: 2em;
+        }
+        .bouquet {
+        display: none;
+         margin: none;
+         width: 100%; 
+         text-align: center; 
+        }
+         .bouquet img {
+         width: 30vw;
+         max-width: 1000px;
+        }
+        .bouquet img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+    </script>
+    <div class="howl-page">
+        <h1 style="font-family: cursive;">Happy Valentines Day >:)</h1>
+        <button onclick="showBouquet()">>ooo what's dis?<</button>
+        <div class="bouquet">
+            <img src="flowie.png" alt="flowie for You" />
+        </div>
+        <div class="message-box" id="message">
+            <p style="font-family: cursive;" >WAW flowie!</p>
+        </div>
+    </div>
+    <script>
+        function showBouquet() {
+            document.querySelector('.bouquet').style.display = 'block';
+            document.getElementById('message').style.display = 'block';
+            var audio = document.getElementById('bg-music');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
