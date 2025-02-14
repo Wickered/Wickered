@@ -122,12 +122,17 @@
         display: none; 
     }
 }
-@media (orientation: landscape) {
+        @media (orientation: landscape) {
     .rotate-message {
         display: none;
     }
     .main-page {
         display: flex;
+    }
+}
+        @media (orientation: portrait) {
+    .left-message, .right-message {
+        display: none;
     }
 }
     </style>
