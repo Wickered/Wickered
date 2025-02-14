@@ -52,7 +52,6 @@
             position: absolute;
             display:none;
             font-family: cursive;
-            word-wrap: break-word;
         }
         .left-message{
             left: 6%;
@@ -98,6 +97,12 @@
             transform:none;
             cursor:default;
         }
+        @media (max-width: 768px) {
+    .left-message, .right-message {
+        font-size: 1.2em;
+        width: 40%; 
+    }
+}
     </style>
 </head>
 <body>
