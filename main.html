@@ -103,9 +103,36 @@
         width: 40%; 
     }
 }
+        @media (orientation: portrait) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .rotate-message {
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .main-page {
+        display: none; 
+    }
+}
+@media (orientation: landscape) {
+    .rotate-message {
+        display: none;
+    }
+    .main-page {
+        display: flex;
+    }
+}
     </style>
 </head>
 <body>
+    <div class="rotate-message">Please rotate your device to landscape mode!</div>
+<div class="main-page">
+</div>
     <audio id="bg-music" loop>
         <source src="music.mp3" type="audio/mpeg">
     </audio>
@@ -151,5 +178,6 @@
             }
         });
     </script>
+    </div>
 </body>
 </html>
